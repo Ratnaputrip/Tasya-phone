@@ -32,25 +32,25 @@
         <ul class="nav">
          
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="profil">
               <i class="material-icons">account_circle</i>
               <p>User Profile</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="masuk_barang">
               <i class="material-icons">content_paste</i>
               <p>Table barang</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="tambah_kategori">
               <i class="material-icons">apps</i>
               <p>Kategori</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="artikel">
               <i class="material-icons">dashboard</i>
               <p>Artikel</p>
             </a>
@@ -99,7 +99,7 @@
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Table Barang</h4>
                   <p class="card-category"> </p>
-                  <button type="submit" class="btn btn-primary pull-right"><a href="tambah">Tambah</button>
+                  <a href="<?= site_url('masuk/tambah'); ?>"> <button type="submit" class="btn btn-primary pull-right">Tambah</button></a>
 
                 </div>
 
@@ -130,8 +130,8 @@
                   $form->addInput('nama_barang','plaintext');
 
                   $form->addInput('id_ktgbarang','dropdown');
-                  $form->setLabel('id_ktgbarang','ktg_barang');
-                  $form->tableOptions('id_ktgbarang','ktg_barang','ktg_barang');
+                  //$form->setLabel('id','ktg_barang');
+                  $form->tableOptions('id_ktgbarang','ktg_barang','id','ktg_barang');
                   $form->addInput('image','thumbnail');
                   $form->setImage('image','barang');
                   $form->addInput('harga_barang','plaintext');
@@ -153,30 +153,7 @@
 
       <footer class="footer">
         <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
+
           <div class="copyright float-right" id="date">
             , made with <i class="material-icons">favorite</i> by
             <a href="" target="_blank">Creative Tim</a> for a better web.

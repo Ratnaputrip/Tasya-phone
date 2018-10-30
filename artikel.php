@@ -64,7 +64,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="<?= base_url('');?>"></a>
+            <a class="navbar-brand" href="<?= base_url('');?>">Table List</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -89,7 +89,60 @@
 
 
 
-    
+
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Input Artikel</h4>
+                  <p class="card-category"> </p>
+                  <a href="<?= site_url('masuk/tambah_artikel'); ?>"> <button type="submit" class="btn btn-primary pull-right">Tambah</button></a>
+                </div>
+
+                <div class="card-body">
+                  <?php 
+                 
+                  $form = new ecrud();
+                  $form->init('roll');
+                  $form->setTable('artikel');
+                  $form->addInput('id','link');
+                  $form->setLink('id',base_url('index.php/masuk/artikel'),'id');
+                  $form->addInput('alamat','plaintext');
+                  $form->addInput('no_telp','plaintext');
+                  $form->addInput('iklan','thumbnail');
+                  $form->setImage('iklan','artikel');
+                  $form->addInput('cara_pesan','textarea');
+                  // $form->setEditLink(base_url('index.php/masuk/tambah_artikel?id='));
+                  // $form->setEdit(TRUE);
+                  $form->setDelete(TRUE);
+                  $form->form();
+                  
+                 
+                  ?>
+
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <footer class="footer">
+        <div class="container-fluid">
+         
+          <div class="copyright float-right" id="date">
+            , made with <i class="material-icons">favorite</i> by
+            <a href="" target="_blank">Creative Tim</a> for a better web.
+          </div>
+        </div>
+      </footer>
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById('date');

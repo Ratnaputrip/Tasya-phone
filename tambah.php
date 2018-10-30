@@ -32,7 +32,7 @@
         <ul class="nav">
          
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="profil">
               <i class="material-icons">account_circle</i>
               <p>User Profile</p>
             </a>
@@ -44,13 +44,13 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="tambah_kategori">
               <i class="material-icons">apps</i>
               <p>Kategori</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="artikel">
               <i class="material-icons">dashboard</i>
               <p>Artikel</p>
             </a>
@@ -99,7 +99,7 @@
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Input Barang</h4>
                   <p class="card-category"> </p>
-                  <button type="submit" class="btn btn-primary pull-right"><a href="masuk_barang">Kelola</button>
+                  <a href="<?= site_url('masuk/masuk_barang'); ?>"> <button type="submit" class="btn btn-primary pull-right">Kelola</button></a>
                 </div>
 
                 <div class="card-body">
@@ -112,12 +112,12 @@
                   $form->setId($id_barang);
                   $form->addInput('id_ktgbarang','dropdown');
                   // $form->setTable('id_ktgbarang','ktg_barang');
-                  $form->tableOptions('id_ktgbarang','ktg_barang','id_ktgbarang','ktg_barang');
+                  $form->tableOptions('id_ktgbarang','ktg_barang','id','ktg_barang');
                   $form->addInput('image','upload');
                   $form->addInput('harga_barang','text');
                   $form->setType('harga_barang','number');
                   $form->addInput('stok','text');
-                  $form->setType('stok','text');
+                  $form->setType('stok','number');
                   $form->addInput('deskripsi','textarea');
                   $form->form();
                   
@@ -137,30 +137,7 @@
 
       <footer class="footer">
         <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
+         
           <div class="copyright float-right" id="date">
             , made with <i class="material-icons">favorite</i> by
             <a href="" target="_blank">Creative Tim</a> for a better web.

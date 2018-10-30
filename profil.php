@@ -89,7 +89,41 @@
 
 
 
-    
+
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Selamat Datang!!!</h4>
+                  <p class="card-category"> </p>
+                  <!-- <a href="<?= site_url('masuk/tambah_artikel'); ?>"> <button type="submit" class="btn btn-primary pull-right">Tambah</button></a> -->
+                </div>
+
+                <div class="card-body">
+                
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <footer class="footer">
+        <div class="container-fluid">
+         
+          <div class="copyright float-right" id="date">
+            , made with <i class="material-icons">favorite</i> by
+            <a href="" target="_blank">Creative Tim</a> for a better web.
+          </div>
+        </div>
+      </footer>
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById('date');
