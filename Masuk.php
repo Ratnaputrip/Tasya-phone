@@ -29,4 +29,24 @@ class Masuk extends CI_Controller {
 	{
 		$this->load->view('masuk/table_barang');
 	}
+	public function tambah_kategori()
+	{
+		$this->load->view('masuk/tambah_kategori');
+	}
+	public function kategori()
+	{
+		$this->load->view('masuk/kategori');
+	}
+	public function tambah_artikel()
+	{
+		$this->load->view('masuk/tambah_artikel');
+	}
+	public function artikel()
+	{
+		$this->load->view('masuk/artikel');
+	}
+	public function profil()
+	{
+		$this->load->view('masuk/profil');
+	}
 }
